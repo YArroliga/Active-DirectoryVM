@@ -1,2 +1,107 @@
-# Active-DirectoryVM
-his tutorial outlines the implementation of on-premises Active Directory within Azure Virtual Machines.
+<p align="center">
+<img src="https://i.imgur.com/pU5A58S.png" alt="Microsoft Active Directory Logo"/>
+</p>
+
+<h1>On-premises Active Directory Deployed in the Cloud (Azure)</h1>
+This tutorial outlines the implementation of on-premises Active Directory within Azure Virtual Machines.<br />
+
+
+<h2>Environments and Technologies Used</h2>
+
+- Microsoft Azure (Virtual Machines/Compute)
+- Remote Desktop
+- Active Directory Domain Services
+- PowerShell
+
+<h2>Operating Systems Used </h2>
+
+- Windows Server 2022
+- Windows 10 (21H2)
+
+<h2>High-Level Deployment and Configuration Steps</h2>
+
+- Create VM network using a windows server and a windows client virtual machine
+- Test Network Connectivity
+- Install Active Directory
+- Create User and Admin accounts
+- 
+
+<h2>Deployment and Configuration Steps</h2>
+
+<h3>Virtual Network Deployment</h3>
+
+<p>In Azure create a server and a Client on the Domain</p>
+
+![image](https://github.com/YArroliga/Active-DirectoryVM/assets/139689160/f85faa60-b043-428a-9a71-7cddb74eee7d)
+
+
+<p>Client-1 is created using the same resources and V-net as DC-1</p>
+
+![image](https://github.com/YArroliga/Active-DirectoryVM/assets/139689160/4f00484c-0b1c-41ec-a6d4-7d00e0ab836b)
+
+
+<p> DC-1's NIC IP adress is set to static</p>
+
+![image](https://github.com/YArroliga/Active-DirectoryVM/assets/139689160/b17b89d1-505f-4409-b108-0a22ed2c7c59)
+
+<h3>Test the Network</h3>
+
+- Client-1 pings DC-1
+- Modify ICMv4
+- Client-1 continously pings DC-1  
+
+![image](https://github.com/YArroliga/Active-DirectoryVM/assets/139689160/f92664ec-0ad0-49dc-a444-d80cab1f0473)
+
+<p>Windows Firewall > Inbound Rules > Sort by Protocol > Enable Core Network Diagnostic</p>
+
+![image](https://github.com/YArroliga/Active-DirectoryVM/assets/139689160/ca9892d2-718e-4240-9d18-3259d052e2b4)
+
+
+![image](https://github.com/YArroliga/Active-DirectoryVM/assets/139689160/3b503c7f-4214-400a-b1b2-c23b850c36bb)
+
+<p> Client-1 continously pings DC-1</p>
+
+![image](https://github.com/YArroliga/Active-DirectoryVM/assets/139689160/ec75cc67-e02e-47f9-959a-675003b09879)
+
+<h3>Install Active Directory</h3>
+
+In DC-1 go to Server Manager > Add Roles and Features > Server Roles > Active Directory Domain Features
+
+![image](https://github.com/YArroliga/Active-DirectoryVM/assets/139689160/5065fe35-c34a-4482-80c7-3c930c486b88)
+
+![image](https://github.com/YArroliga/Active-DirectoryVM/assets/139689160/f8e65568-a788-4f64-87aa-75798a772dd1)
+
+<p>Promote the server into a domain controller and create the domain name</p>
+
+![image](https://github.com/YArroliga/Active-DirectoryVM/assets/139689160/2d26c561-a7e2-4743-8a91-33840c58e187)
+
+![image](https://github.com/YArroliga/Active-DirectoryVM/assets/139689160/f6b7d601-e0b3-4976-95af-68b42ef8a16a)
+
+<p>the server will restart and login credentials are altered to reflect the domain name</p>
+
+![image](https://github.com/YArroliga/Active-DirectoryVM/assets/139689160/3d6f670f-d478-425b-a9ca-cd99a95a6a01)
+
+
+<h3>Active Directory Admin and User Accounts</h3>
+
+In DC-1 go to Server Manager > under Tools > Active Directory Users and Computers
+![image](https://github.com/YArroliga/Active-DirectoryVM/assets/139689160/69f9f07b-673e-4a4a-a55d-371876294daf)
+
+<p>Create two Orginizational Unit labeled _EMPLOYEES and _ADMINS</p>
+
+![image](https://github.com/YArroliga/Active-DirectoryVM/assets/139689160/2f7cadb3-f185-4f4a-8b6e-31a8bdedb506)
+
+<p> In the _ADMINS Organization Unit create a new Admin User </p>
+
+![image](https://github.com/YArroliga/Active-DirectoryVM/assets/139689160/9bc5d7b1-7911-4cc9-a600-f9d215b78ae2)
+
+<p> In the Active Directory Users and Computers window right click the user name and Add to a group. In the Text box type "Domain Admins", the check names button will auto complete.</p> 
+
+  ![image](https://github.com/YArroliga/Active-DirectoryVM/assets/139689160/5d0fc6f1-b8e2-4b57-961e-e11857a50cb4)
+
+
+
+
+
+
+
