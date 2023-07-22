@@ -11,7 +11,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - Microsoft Azure (Virtual Machines/Compute)
 - Remote Desktop
 - Active Directory Domain Services
-- PowerShell
+
 
 <h2>Operating Systems Used </h2>
 
@@ -24,7 +24,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - Test Network Connectivity
 - Install Active Directory
 - Create User and Admin accounts
-- 
+- Remote Desktop as a Generic User
 
 <h2>Deployment and Configuration Steps</h2>
 
@@ -127,7 +127,12 @@ In DC-1 go to Server Manager > under Tools > Active Directory Users and Computer
 
 ![image](https://github.com/YArroliga/Active-DirectoryVM/assets/139689160/f009b259-6111-4057-97b5-54e60fa8eed0)
 ![image](https://github.com/YArroliga/Active-DirectoryVM/assets/139689160/cef8934b-f22b-4917-a19b-92cf5ea8bed9)
-![image](https://github.com/YArroliga/Active-DirectoryVM/assets/139689160/b4ef1c28-bb0a-427e-b7cc-aebe975113d4)
+<p></p>
+
+![image](https://github.com/YArroliga/Active-DirectoryVM/assets/139689160/5f0abe44-4140-4ebe-a022-aebe8f7c92b3)
+  
+
+
 
 
 
