@@ -95,10 +95,39 @@ In DC-1 go to Server Manager > under Tools > Active Directory Users and Computer
 
 ![image](https://github.com/YArroliga/Active-DirectoryVM/assets/139689160/9bc5d7b1-7911-4cc9-a600-f9d215b78ae2)
 
-<p> In the Active Directory Users and Computers window right click the user name and Add to a group. In the Text box type "Domain Admins", the check names button will auto complete.</p> 
+<p> In the Active Directory Users and Computers window right click the User's name and Add to a group. In the Text box type "Domain Admins", the check names button will auto complete.</p> 
 
   ![image](https://github.com/YArroliga/Active-DirectoryVM/assets/139689160/5d0fc6f1-b8e2-4b57-961e-e11857a50cb4)
 
+  <p>Set the DNS server on Client-1 to be DC-1 on the Azure Portal </p>
+
+  ![image](https://github.com/YArroliga/Active-DirectoryVM/assets/139689160/9d034afb-3789-4c38-9de4-917e4346411e)
+
+<p>Restart the server from the Azure portal</p>
+
+![image](https://github.com/YArroliga/Active-DirectoryVM/assets/139689160/6236bd5b-7bbd-4856-9e80-0a28f70254a3)
+
+<p>Remote Desktop into Client-1, right click the start menu > System > Rename this PC > set the domain name to ADlab.com </p>
+
+![image](https://github.com/YArroliga/Active-DirectoryVM/assets/139689160/dc407c9f-e721-44d9-8610-3c5a564aff9a)
+
+
+<h3>Client-1 as a User using Remote Desktop</h3>
+
+<p> Remote Desktop in using the Admin credentials created earlier</p>
+
+![image](https://github.com/YArroliga/Active-DirectoryVM/assets/139689160/43f5518e-99f9-4a06-8de3-9e37ed3af567)
+
+<p>As Admin account System > Remote Desktop > Add "Domain Users" </p> 
+
+![image](https://github.com/YArroliga/Active-DirectoryVM/assets/139689160/cff0fad4-fec1-4c9e-8f9c-63994f1f8758)
+
+<p>Create a generic user in DC-1 </p>
+<p>In Active Users and Computers > right click > New > User</p>
+
+![image](https://github.com/YArroliga/Active-DirectoryVM/assets/139689160/f009b259-6111-4057-97b5-54e60fa8eed0)
+![image](https://github.com/YArroliga/Active-DirectoryVM/assets/139689160/cef8934b-f22b-4917-a19b-92cf5ea8bed9)
+![image](https://github.com/YArroliga/Active-DirectoryVM/assets/139689160/b4ef1c28-bb0a-427e-b7cc-aebe975113d4)
 
 
 
