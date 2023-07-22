@@ -11,6 +11,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - Microsoft Azure (Virtual Machines/Compute)
 - Remote Desktop
 - Active Directory Domain Services
+- File Sharing Activity
 
 
 <h2>Operating Systems Used </h2>
@@ -130,9 +131,24 @@ In DC-1 go to Server Manager > under Tools > Active Directory Users and Computer
 <p></p>
 
 ![image](https://github.com/YArroliga/Active-DirectoryVM/assets/139689160/5f0abe44-4140-4ebe-a022-aebe8f7c92b3)
+
+<h3> File Share on the Domain</h3>
+
+<p>On Dc-1 create four folders</p>
+
+- read-access
+- write-access
+- no-access
+- accounting
+<p>In DC-1, in the the C: Drive > New Folder </p>
   
+![image](https://github.com/YArroliga/Active-DirectoryVM/assets/139689160/467e3f29-4ba0-4b15-8107-f20004200b1b)
 
+<p>Set permissions for the folder</p>
 
+Folder: read-access   Group: “Domain Users”, Permission: “Read”
+Folder: write-access  Group: “Domain Users”, Permissions: “Read/Write”
+Folder: no-access     Group: “Domain Admins”, “Permissions: “Read/Write”
 
 
 
