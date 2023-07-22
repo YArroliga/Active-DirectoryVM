@@ -26,6 +26,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - Install Active Directory
 - Create User and Admin accounts
 - Remote Desktop as a Generic User
+- Share files on the domain
 
 <h2>Deployment and Configuration Steps</h2>
 
