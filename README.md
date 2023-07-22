@@ -166,7 +166,8 @@ In the Share tab > type "Domain Admin" > Add > Set Permission Level to "Read/Wri
 
 <p>Create a new text file in the folder</p>
 
-![image](https://github.com/YArroliga/Active-DirectoryVM/assets/139689160/60c22ba1-de4d-4438-832f-403510b55031)
+![image](https://github.com/YArroliga/Active-DirectoryVM/assets/139689160/031afacf-a654-44e8-941e-7f87dc96d821)
+
 
 
 
