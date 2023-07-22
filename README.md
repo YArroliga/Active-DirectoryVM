@@ -139,16 +139,35 @@ In DC-1 go to Server Manager > under Tools > Active Directory Users and Computer
 - read-access
 - write-access
 - no-access
-- accounting
+
 <p>In DC-1, in the the C: Drive > New Folder </p>
   
 ![image](https://github.com/YArroliga/Active-DirectoryVM/assets/139689160/467e3f29-4ba0-4b15-8107-f20004200b1b)
 
 <p>Set permissions for the folder</p>
 
-Folder: read-access   Group: “Domain Users”, Permission: “Read”
-Folder: write-access  Group: “Domain Users”, Permissions: “Read/Write”
-Folder: no-access     Group: “Domain Admins”, “Permissions: “Read/Write”
+<p>Folder: read-access Group: “Domain Users”, Permission: “Read”</p>
+<p>Folder: write-access Group: “Domain Users”, Permissions: “Read/Write”</p>
+<p>Folder: no-access Group: “Domain Admins”, “Permissions: “Read/Write”</p>
+
+<p>Right Click the folder > Properties > Sharing >Share</p>
+
+![image](https://github.com/YArroliga/Active-DirectoryVM/assets/139689160/2182e14c-c273-4327-83eb-e8de2e10a920)
+
+In the Share tab > type "Domain Admin" > Add > Set Permission Level to "Read/Write"
+
+![image](https://github.com/YArroliga/Active-DirectoryVM/assets/139689160/871f6dd8-aa23-4754-96e2-4a5d246b108c)
+
+<p> In Client-1, log in as a user and add a file to write-access</p>
+<p>In File Explorer, in the search bar type "\\DC-1" for access to the network files </p>
+
+![image](https://github.com/YArroliga/Active-DirectoryVM/assets/139689160/7d059f30-87e4-4f7f-925f-570600c2cbed)
+
+<p>Create a new text file in the folder</p>
+
+![image](https://github.com/YArroliga/Active-DirectoryVM/assets/139689160/60c22ba1-de4d-4438-832f-403510b55031)
+
+
 
 
 
